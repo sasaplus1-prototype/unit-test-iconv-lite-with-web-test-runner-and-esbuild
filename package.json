@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "iconv-lite": "^0.6.3"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@web/dev-server-esbuild": "^0.4.1",
+    "@web/dev-server-import-maps": "^0.1.1",
+    "@web/test-runner": "^0.16.1",
+    "@web/test-runner-playwright": "^0.10.0",
+    "buffer": "^6.0.3",
+    "esbuild": "^0.17.19"
+  },
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "coverage": "web-test-runner --node-resolve --playwright --coverage",
+    "precoverage": "npm run build",
+    "pretest": "npm run build",
+    "print": "od -t x1 shift_jis.txt",
+    "test": "web-test-runner --node-resolve --playwright --browsers chromium"
+  }
+}
